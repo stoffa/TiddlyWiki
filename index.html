@@ -189,6 +189,8 @@ Error message and password prompt
 
 <li>Auto update off</li>
 
+<li>childTasks</li>
+
 <li>Completed</li>
 
 <li>Discounts</li>
@@ -196,6 +198,8 @@ Error message and password prompt
 <li>Front Door</li>
 
 <li>Genealogy</li>
+
+<li>Get Estimate</li>
 
 <li>GoogleLinks</li>
 
@@ -212,6 +216,8 @@ Error message and password prompt
 <li>TableOfContents</li>
 
 <li>task</li>
+
+<li>Task List</li>
 
 <li>TaskManagementExampleDraggableTemplate</li>
 
@@ -9471,10 +9477,10 @@ GettingStarted
 <div created="20200315135904979" modified="20200322123334304" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Orphans</pre>
 </div>
-<div created="20200312172842416" modified="20200324005246783" title="$:/state/tab/sidebar--595412856">
-<pre>TableOfContents</pre>
+<div created="20200312172842416" modified="20200324010144834" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20200321180427181" list="ToDo GoogleLinks" modified="20200324005104808" title="$:/StoryList">
+<div created="20200321180427181" list="[[Get Estimate]] [[Task List]] ToDo GoogleLinks" modified="20200324010149694" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9665,6 +9671,24 @@ GettingStarted
 <div created="20200312174134753" modified="20200312174640907" tags="" title="Auto update off">
 <pre></pre>
 </div>
+<div created="20200324112552009" modified="20200324112628835" tags="" title="childTasks">
+<pre>&lt;ul&gt;
+&lt;$list filter='[tag[task]parent{!!title}]'&gt;
+&lt;$list filter='[is[current]!tag[done]]'&gt;
+&lt;li&gt;
+&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;&lt;$view field='description'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$checkbox&gt;&lt;br&gt;
+{{||childTasks}}
+&lt;/li&gt;
+&lt;/$list&gt;
+&lt;$list filter='[is[current]tag[done]]'&gt;
+&lt;li&gt;
+&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;~~&lt;$view field='description'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;~~&lt;/$checkbox&gt;&lt;br&gt;
+{{||childTasks}}
+&lt;/li&gt;
+&lt;/$list&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;</pre>
+</div>
 <div created="20200324001933893" modified="20200324005149256" tags="tasks" title="Completed">
 <pre>! Completed tasks
 
@@ -9699,6 +9723,9 @@ Declan Robert &amp; McCready Carmine Sesa! Born March 28th 2016
 
 ''Edward Prokop''
 Death 27 Feb 2020</pre>
+</div>
+<div created="20200324112639563" modified="20200324112824603" parent="Front Door" tags="task [[Front Door]]" title="Get Estimate">
+<pre></pre>
 </div>
 <div created="20200312200805916" modified="20200324005948907" tags="TableOfContents" title="GoogleLinks" type="text/vnd.tiddlywiki">
 <pre>* [[Ads|https://ads.google.com]]
@@ -9858,7 +9885,7 @@ Haymarket, VA</pre>
 <div created="20200324003339787" modified="20200324005236523" tags="task" title="Sheetrock">
 <pre>Count number of sheets.</pre>
 </div>
-<div caption="Contents" created="20200323005943467" list-before="$:/core/ui/SideBar/Open" modified="20200324001411267" tags="$:/tags/SideBar" title="TableOfContents">
+<div caption="Contents" created="20200323005943467" list-before="$:/core/ui/SideBar/Open" modified="20200324010217040" tags="$:/tags/SideBar" title="TableOfContents">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
 &lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
@@ -9868,10 +9895,28 @@ Haymarket, VA</pre>
 <div created="20200324003956468" list="Sheetrock [[Front Door]]" modified="20200324004840433" title="task">
 <pre></pre>
 </div>
+<div created="20200324112519177" modified="20200324112928090" tags="" title="Task List">
+<pre>&lt;ul&gt;
+&lt;$list filter='[tag[task]!has[parent]]'&gt;
+&lt;$list filter='[is[current]!tag[done]]'&gt;
+&lt;li&gt;
+&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;&lt;$view field='description'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$checkbox&gt;&lt;br&gt;
+{{||childTasks}}
+&lt;/li&gt;
+&lt;/$list&gt;
+&lt;$list filter='[is[current]tag[done]]'&gt;
+&lt;li&gt;
+&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;~~&lt;$view field='description'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;~~&lt;/$checkbox&gt;&lt;br&gt;
+{{||childTasks}}
+&lt;/li&gt;
+&lt;/$list&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;</pre>
+</div>
 <div created="20200324004326990" modified="20200324004400620" tags="" title="TaskManagementExampleDraggableTemplate">
 <pre>&lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;</pre>
 </div>
-<div created="20200312210739330" modified="20200324005222075" tags="TableOfContents" title="ToDo">
+<div created="20200312210739330" modified="20200324112513851" tags="TableOfContents" title="ToDo">
 <pre>! Outstanding tasks
 
 //Drag the tasks to re-order them//
