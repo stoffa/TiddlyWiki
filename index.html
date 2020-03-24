@@ -191,8 +191,6 @@ Error message and password prompt
 
 <li>Discounts</li>
 
-<li>Draft of 'ToDo'</li>
-
 <li>Front Door</li>
 
 <li>Genealogy</li>
@@ -207,7 +205,13 @@ Error message and password prompt
 
 <li>Scuba</li>
 
+<li>Sheetrock</li>
+
 <li>TableOfContents</li>
+
+<li>task</li>
+
+<li>TaskManagementExampleDraggableTemplate</li>
 
 <li>ToDo</li>
 
@@ -9465,7 +9469,7 @@ GettingStarted
 <div created="20200312172842416" modified="20200324001415507" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
-<div created="20200321180427181" list="[[Front Door]] Completed [[Draft of 'ToDo']] TableOfContents GoogleLinks GettingStarted" modified="20200324001907556" title="$:/StoryList">
+<div created="20200321180427181" list="TaskManagementExampleDraggableTemplate [[Front Door]] ToDo Sheetrock TableOfContents GoogleLinks GettingStarted" modified="20200324003420647" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9656,7 +9660,7 @@ GettingStarted
 <div created="20200312174134753" modified="20200312174640907" tags="" title="Auto update off">
 <pre></pre>
 </div>
-<div created="20200324001933893" modified="20200324003206673" tags="tasks" title="Completed">
+<div created="20200324001933893" modified="20200324003947870" tags="tasks" title="Completed">
 <pre></pre>
 </div>
 <div created="20200313124127065" modified="20200313124148877" tags="" title="Discounts">
@@ -9664,41 +9668,7 @@ GettingStarted
 * 0560016831 - LM rate - Hampton Inn, Homewood Suites, Embassy Suites, Double Tree
 * Haircut M-Th 9-2</pre>
 </div>
-<div created="20200312210739330" draft.of="ToDo" draft.title="ToDo" modified="20200324003249470" tags="tasks TableOfContents" title="Draft of 'ToDo'">
-<pre>This is a version of the TaskManagementDemo enhanced with the ability to drag and drop the task list to re-order them.
-
-! Outstanding tasks
-
-//Drag the tasks to re-order them//
-
-&lt;&lt;list-tagged-draggable tag:&quot;task&quot; subFilter:&quot;!has[draft.of]!tag[done]&quot; itemTemplate:&quot;TaskManagementExampleDraggableTemplate&quot; emptyMessage:&quot;You don't have any active tasks&quot;&gt;&gt;
-
-! Completed tasks
-
-//(Listed in reverse order of completion)//
-
-&lt;$list filter=&quot;[!has[draft.of]tag[task]tag[done]sort[created]]&quot;&gt;
-&lt;div&gt;
-&lt;$checkbox tag=&quot;done&quot;&gt; ~~&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;~~&lt;/$checkbox&gt;
-&lt;/div&gt;
-&lt;/$list&gt;
-
-! Home
-* Front Door - Composite top and bottom rails
-** Thompson Creek
-** Anderson
-** Jen-Weld - Composite
-** Therma-Tru
-** ProVia - Best Insulation
-* Sheetrock
-* Door stop
-* Bathroom vents
-
-! Recurring
-* Backup websites monthly
-* Update Calendar of Events for Bingo - Sept</pre>
-</div>
-<div created="20200324003143724" modified="20200324003307584" tags="task" title="Front Door">
+<div created="20200324003143724" modified="20200324004539449" tags="task" title="Front Door">
 <pre>! Home
 * Front Door - Composite top and bottom rails
 ** Thompson Creek
@@ -9872,6 +9842,9 @@ Haymarket, VA</pre>
 !!! Flights
 </pre>
 </div>
+<div created="20200324003339787" modified="20200324004538007" tags="task" title="Sheetrock">
+<pre>Count number of sheets.</pre>
+</div>
 <div caption="Contents" created="20200323005943467" list-before="$:/core/ui/SideBar/Open" modified="20200324001411267" tags="$:/tags/SideBar" title="TableOfContents">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
@@ -9879,14 +9852,25 @@ Haymarket, VA</pre>
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20200312210739330" modified="20200324003110987" tags="tasks TableOfContents" title="ToDo">
+<div created="20200324003956468" list="[[Front Door]] Sheetrock" modified="20200324003956468" title="task">
+<pre></pre>
+</div>
+<div created="20200324004326990" modified="20200324004400620" tags="" title="TaskManagementExampleDraggableTemplate">
+<pre>&lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;</pre>
+</div>
+<div created="20200312210739330" modified="20200324004535126" tags="TableOfContents" title="ToDo">
 <pre>This is a version of the TaskManagementDemo enhanced with the ability to drag and drop the task list to re-order them.
 
 ! Outstanding tasks
 
 //Drag the tasks to re-order them//
 
+
 &lt;&lt;list-tagged-draggable tag:&quot;task&quot; subFilter:&quot;!has[draft.of]!tag[done]&quot; itemTemplate:&quot;TaskManagementExampleDraggableTemplate&quot; emptyMessage:&quot;You don't have any active tasks&quot;&gt;&gt;
+
+&lt;div&gt;
+&lt;$checkbox tag=&quot;done&quot;&gt; ~~&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;~~&lt;/$checkbox&gt;
+&lt;/div&gt;
 
 ! Completed tasks
 
@@ -9898,13 +9882,6 @@ Haymarket, VA</pre>
 &lt;/div&gt;
 &lt;/$list&gt;
 
-! Home
-* Front Door - Composite top and bottom rails
-** Thompson Creek
-** Anderson
-** Jen-Weld - Composite
-** Therma-Tru
-** ProVia - Best Insulation
 * Sheetrock
 * Door stop
 * Bathroom vents
