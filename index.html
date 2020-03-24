@@ -9858,19 +9858,14 @@ Haymarket, VA</pre>
 <div created="20200324004326990" modified="20200324004400620" tags="" title="TaskManagementExampleDraggableTemplate">
 <pre>&lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;</pre>
 </div>
-<div created="20200312210739330" modified="20200324004535126" tags="TableOfContents" title="ToDo">
+<div created="20200312210739330" modified="20200324004745546" tags="TableOfContents" title="ToDo">
 <pre>This is a version of the TaskManagementDemo enhanced with the ability to drag and drop the task list to re-order them.
 
 ! Outstanding tasks
 
 //Drag the tasks to re-order them//
 
-
 &lt;&lt;list-tagged-draggable tag:&quot;task&quot; subFilter:&quot;!has[draft.of]!tag[done]&quot; itemTemplate:&quot;TaskManagementExampleDraggableTemplate&quot; emptyMessage:&quot;You don't have any active tasks&quot;&gt;&gt;
-
-&lt;div&gt;
-&lt;$checkbox tag=&quot;done&quot;&gt; ~~&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;~~&lt;/$checkbox&gt;
-&lt;/div&gt;
 
 ! Completed tasks
 
