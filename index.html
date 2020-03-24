@@ -163,6 +163,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/showeditpreview</li>
+
 <li>$:/state/sidebar</li>
 
 <li>$:/state/tab-1749438307</li>
@@ -9454,6 +9456,9 @@ GettingStarted
 <div created="20200312172150352" modified="20200312172151148" title="$:/SiteTitle">
 <pre>TiddlyWiki</pre>
 </div>
+<div created="20200324005941849" modified="20200324005946424" title="$:/state/showeditpreview">
+<pre>no</pre>
+</div>
 <div created="20200312174613269" modified="20200312174630550" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
@@ -9466,10 +9471,10 @@ GettingStarted
 <div created="20200315135904979" modified="20200322123334304" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Orphans</pre>
 </div>
-<div created="20200312172842416" modified="20200324001415507" title="$:/state/tab/sidebar--595412856">
+<div created="20200312172842416" modified="20200324005246783" title="$:/state/tab/sidebar--595412856">
 <pre>TableOfContents</pre>
 </div>
-<div created="20200321180427181" list="TaskManagementExampleDraggableTemplate [[Front Door]] ToDo Sheetrock TableOfContents GoogleLinks GettingStarted" modified="20200324003420647" title="$:/StoryList">
+<div created="20200321180427181" list="ToDo GoogleLinks" modified="20200324005104808" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9660,15 +9665,23 @@ GettingStarted
 <div created="20200312174134753" modified="20200312174640907" tags="" title="Auto update off">
 <pre></pre>
 </div>
-<div created="20200324001933893" modified="20200324003947870" tags="tasks" title="Completed">
-<pre></pre>
+<div created="20200324001933893" modified="20200324005149256" tags="tasks" title="Completed">
+<pre>! Completed tasks
+
+//(Listed in reverse order of completion)//
+
+&lt;$list filter=&quot;[!has[draft.of]tag[task]tag[done]sort[created]]&quot;&gt;
+&lt;div&gt;
+&lt;$checkbox tag=&quot;done&quot;&gt; ~~&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;~~&lt;/$checkbox&gt;
+&lt;/div&gt;
+&lt;/$list&gt;</pre>
 </div>
 <div created="20200313124127065" modified="20200313124148877" tags="" title="Discounts">
 <pre>* 0000432 - LM Rate - Hilton, Hilton Garden Inn
 * 0560016831 - LM rate - Hampton Inn, Homewood Suites, Embassy Suites, Double Tree
 * Haircut M-Th 9-2</pre>
 </div>
-<div created="20200324003143724" modified="20200324004539449" tags="task" title="Front Door">
+<div created="20200324003143724" modified="20200324005230313" tags="task" title="Front Door">
 <pre>! Home
 * Front Door - Composite top and bottom rails
 ** Thompson Creek
@@ -9687,7 +9700,7 @@ Declan Robert &amp; McCready Carmine Sesa! Born March 28th 2016
 ''Edward Prokop''
 Death 27 Feb 2020</pre>
 </div>
-<div created="20200312200805916" modified="20200323010453833" tags="TableOfContents" title="GoogleLinks" type="text/vnd.tiddlywiki">
+<div created="20200312200805916" modified="20200324005948907" tags="TableOfContents" title="GoogleLinks" type="text/vnd.tiddlywiki">
 <pre>* [[Ads|https://ads.google.com]]
 * [[Android Device Manager|https://www.google.com/android/devicemanager]]
 * [[Blogger|https://www.blogger.com]]
@@ -9842,7 +9855,7 @@ Haymarket, VA</pre>
 !!! Flights
 </pre>
 </div>
-<div created="20200324003339787" modified="20200324004538007" tags="task" title="Sheetrock">
+<div created="20200324003339787" modified="20200324005236523" tags="task" title="Sheetrock">
 <pre>Count number of sheets.</pre>
 </div>
 <div caption="Contents" created="20200323005943467" list-before="$:/core/ui/SideBar/Open" modified="20200324001411267" tags="$:/tags/SideBar" title="TableOfContents">
@@ -9852,30 +9865,18 @@ Haymarket, VA</pre>
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20200324003956468" list="[[Front Door]] Sheetrock" modified="20200324003956468" title="task">
+<div created="20200324003956468" list="Sheetrock [[Front Door]]" modified="20200324004840433" title="task">
 <pre></pre>
 </div>
 <div created="20200324004326990" modified="20200324004400620" tags="" title="TaskManagementExampleDraggableTemplate">
 <pre>&lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;</pre>
 </div>
-<div created="20200312210739330" modified="20200324004745546" tags="TableOfContents" title="ToDo">
-<pre>This is a version of the TaskManagementDemo enhanced with the ability to drag and drop the task list to re-order them.
-
-! Outstanding tasks
+<div created="20200312210739330" modified="20200324005222075" tags="TableOfContents" title="ToDo">
+<pre>! Outstanding tasks
 
 //Drag the tasks to re-order them//
 
 &lt;&lt;list-tagged-draggable tag:&quot;task&quot; subFilter:&quot;!has[draft.of]!tag[done]&quot; itemTemplate:&quot;TaskManagementExampleDraggableTemplate&quot; emptyMessage:&quot;You don't have any active tasks&quot;&gt;&gt;
-
-! Completed tasks
-
-//(Listed in reverse order of completion)//
-
-&lt;$list filter=&quot;[!has[draft.of]tag[task]tag[done]sort[created]]&quot;&gt;
-&lt;div&gt;
-&lt;$checkbox tag=&quot;done&quot;&gt; ~~&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;~~&lt;/$checkbox&gt;
-&lt;/div&gt;
-&lt;/$list&gt;
 
 * Sheetrock
 * Door stop
