@@ -197,13 +197,17 @@ Error message and password prompt
 
 <li>Front Door</li>
 
+<li>G&amp;K Handyman Services</li>
+
 <li>Genealogy</li>
 
-<li>Get Estimate</li>
+<li>Get Estimates</li>
 
 <li>GoogleLinks</li>
 
 <li>Hiking</li>
+
+<li>LCS Contracting</li>
 
 <li>LionsClub</li>
 
@@ -9480,7 +9484,7 @@ GettingStarted
 <div created="20200312172842416" modified="20200324010144834" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20200321180427181" list="[[Get Estimate]] [[Task List]] ToDo GoogleLinks" modified="20200324010149694" title="$:/StoryList">
+<div created="20200321180427181" list="[[Task List]] ToDo GoogleLinks" modified="20200324215609637" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9671,18 +9675,18 @@ GettingStarted
 <div created="20200312174134753" modified="20200312174640907" tags="" title="Auto update off">
 <pre></pre>
 </div>
-<div created="20200324112552009" modified="20200324112628835" tags="" title="childTasks">
+<div created="20200324112552009" modified="20200324204910698" tags="" title="childTasks">
 <pre>&lt;ul&gt;
 &lt;$list filter='[tag[task]parent{!!title}]'&gt;
 &lt;$list filter='[is[current]!tag[done]]'&gt;
 &lt;li&gt;
-&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;&lt;$view field='description'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$checkbox&gt;&lt;br&gt;
+&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;&lt;br&gt;
 {{||childTasks}}
 &lt;/li&gt;
 &lt;/$list&gt;
 &lt;$list filter='[is[current]tag[done]]'&gt;
 &lt;li&gt;
-&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;~~&lt;$view field='description'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;~~&lt;/$checkbox&gt;&lt;br&gt;
+&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;~~&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;~~&lt;/$checkbox&gt;&lt;br&gt;
 {{||childTasks}}
 &lt;/li&gt;
 &lt;/$list&gt;
@@ -9705,7 +9709,7 @@ GettingStarted
 * 0560016831 - LM rate - Hampton Inn, Homewood Suites, Embassy Suites, Double Tree
 * Haircut M-Th 9-2</pre>
 </div>
-<div created="20200324003143724" modified="20200324005230313" tags="task" title="Front Door">
+<div created="20200324003143724" modified="20200324204925340" tags="task" title="Front Door">
 <pre>! Home
 * Front Door - Composite top and bottom rails
 ** Thompson Creek
@@ -9713,6 +9717,9 @@ GettingStarted
 ** Jen-Weld - Composite
 ** Therma-Tru
 ** ProVia - Best Insulation</pre>
+</div>
+<div created="20200324215439790" modified="20200324215606264" parent="Get Estimates" tags="task" title="G&amp;K Handyman Services">
+<pre>Guillermo Cordova, 571 382-8131</pre>
 </div>
 <div created="20200313180425042" modified="20200313180643717" tags="" title="Genealogy">
 <pre>''Dad''
@@ -9724,7 +9731,7 @@ Declan Robert &amp; McCready Carmine Sesa! Born March 28th 2016
 ''Edward Prokop''
 Death 27 Feb 2020</pre>
 </div>
-<div created="20200324112639563" modified="20200324112824603" parent="Front Door" tags="task [[Front Door]]" title="Get Estimate">
+<div created="20200324112639563" modified="20200324215229287" parent="Front Door" tags="task [[Front Door]]" title="Get Estimates">
 <pre></pre>
 </div>
 <div created="20200312200805916" modified="20200324005948907" tags="TableOfContents" title="GoogleLinks" type="text/vnd.tiddlywiki">
@@ -9768,6 +9775,9 @@ Death 27 Feb 2020</pre>
 ''Mile 729'' – Troutville, VA: Eight tenths of a mile from the trail is the town of Troutville complete with a Kroger grocery store and outfitter. Troutville also offers a relatively new brewery within walking distance, Flying Mouse Brewery, along with many lodging options.
 
 ''Mile 784'' – Glasgow, VA: Glasgow isn’t the easiest place to hitch a ride into town based on my experience, but patience usually pays off. There are small grocers in town and a free,town-provided pavilion with hot showers, a porta-potty, and tenting allowed.</pre>
+</div>
+<div created="20200324215035462" modified="20200324215619321" parent="Get Estimates" tags="task" title="LCS Contracting">
+<pre>Don Logsdon 703-565-7642</pre>
 </div>
 <div created="20200312211146383" modified="20200323011117855" tags="TableOfContents" title="LionsClub">
 <pre>! To Do
@@ -9895,28 +9905,28 @@ Haymarket, VA</pre>
 <div created="20200324003956468" list="Sheetrock [[Front Door]]" modified="20200324004840433" title="task">
 <pre></pre>
 </div>
-<div created="20200324112519177" modified="20200324112928090" tags="" title="Task List">
+<div created="20200324112519177" modified="20200324204836519" tags="" title="Task List">
 <pre>&lt;ul&gt;
 &lt;$list filter='[tag[task]!has[parent]]'&gt;
 &lt;$list filter='[is[current]!tag[done]]'&gt;
 &lt;li&gt;
-&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;&lt;$view field='description'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;&lt;/$checkbox&gt;&lt;br&gt;
+&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;&lt;br&gt;
 {{||childTasks}}
 &lt;/li&gt;
 &lt;/$list&gt;
 &lt;$list filter='[is[current]tag[done]]'&gt;
 &lt;li&gt;
-&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;~~&lt;$view field='description'&gt;&lt;$view field='title'/&gt;&lt;/$view&gt;~~&lt;/$checkbox&gt;&lt;br&gt;
+&lt;$checkbox tiddler=&lt;&lt;currentTiddler&gt;&gt; tag=done&gt;~~&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;~~&lt;/$checkbox&gt;&lt;br&gt;
 {{||childTasks}}
 &lt;/li&gt;
 &lt;/$list&gt;
 &lt;/$list&gt;
 &lt;/ul&gt;</pre>
 </div>
-<div created="20200324004326990" modified="20200324004400620" tags="" title="TaskManagementExampleDraggableTemplate">
+<div created="20200324004326990" modified="20200324204921958" tags="" title="TaskManagementExampleDraggableTemplate">
 <pre>&lt;$checkbox tag=&quot;done&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/$checkbox&gt;</pre>
 </div>
-<div created="20200312210739330" modified="20200324112513851" tags="TableOfContents" title="ToDo">
+<div created="20200312210739330" modified="20200324214955065" tags="TableOfContents" title="ToDo">
 <pre>! Outstanding tasks
 
 //Drag the tasks to re-order them//
